@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TomaszBaseLab5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Support">
+    <Key>
+      <PropertyRef Name="SupportId" />
+    </Key>
+    <Property Name="SupportId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Website" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Function" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Template">
+    <Key>
+      <PropertyRef Name="TemplateId" />
+    </Key>
+    <Property Name="TemplateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Website" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Level" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityContainer Name="TomaszBaseLab5ModelStoreContainer">
+    <EntitySet Name="Support" EntityType="Self.Support" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Template" EntityType="Self.Template" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

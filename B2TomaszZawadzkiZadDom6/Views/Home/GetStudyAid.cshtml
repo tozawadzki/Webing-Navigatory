@@ -1,0 +1,27 @@
+﻿@model List<B2TomaszZawadzkiZadDom6.ViewModels.StudyAidVM>
+
+@{
+    ViewBag.Title = "GetStudyAid";
+}
+
+
+<html>
+<head>
+    <title>Study Aid</title>
+</head>
+<body>
+    @foreach (var site in Model)
+    {
+        <div>         
+            <h2>
+                <a href="https://www.w3schools.com/" target="_blank"> @site.Website </a>
+            </h2>
+            <h4>Function: @site.Function</h4>
+            <img src="@site.Logo" alt="@site.Website" />
+            <hr />
+        </div>
+    }
+</body>
+</html>
+
+

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TomaszBaseLab5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Support">
+          <Key>
+            <PropertyRef Name="SupportId" />
+          </Key>
+          <Property Name="SupportId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Website" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Function" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Logo" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="Template">
+          <Key>
+            <PropertyRef Name="TemplateId" />
+          </Key>
+          <Property Name="TemplateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Website" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Content" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Level" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Logo" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityContainer Name="TomaszBaseLab5ModelStoreContainer">
+          <EntitySet Name="Support" EntityType="Self.Support" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Template" EntityType="Self.Template" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TomaszBaseLab5Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Support">
+          <Key>
+            <PropertyRef Name="SupportId" />
+          </Key>
+          <Property Name="SupportId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Website" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Function" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Logo" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Template">
+          <Key>
+            <PropertyRef Name="TemplateId" />
+          </Key>
+          <Property Name="TemplateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Website" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Content" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Level" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Logo" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="TomaszBaseLab5Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Support" EntityType="Self.Support" />
+          <EntitySet Name="Template" EntityType="Self.Template" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TomaszBaseLab5ModelStoreContainer" CdmEntityContainer="TomaszBaseLab5Entities">
+          <EntitySetMapping Name="Support">
+            <EntityTypeMapping TypeName="TomaszBaseLab5Model.Support">
+              <MappingFragment StoreEntitySet="Support">
+                <ScalarProperty Name="SupportId" ColumnName="SupportId" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Function" ColumnName="Function" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Template">
+            <EntityTypeMapping TypeName="TomaszBaseLab5Model.Template">
+              <MappingFragment StoreEntitySet="Template">
+                <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

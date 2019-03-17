@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TomaszBaseLab5ModelStoreContainer" CdmEntityContainer="TomaszBaseLab5Entities">
+    <EntitySetMapping Name="Support">
+      <EntityTypeMapping TypeName="TomaszBaseLab5Model.Support">
+        <MappingFragment StoreEntitySet="Support">
+          <ScalarProperty Name="SupportId" ColumnName="SupportId" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Function" ColumnName="Function" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Template">
+      <EntityTypeMapping TypeName="TomaszBaseLab5Model.Template">
+        <MappingFragment StoreEntitySet="Template">
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,27 @@
+﻿@model List<B2TomaszZawadzkiZadDom6.ViewModels.TemplatesVM>
+
+@{
+    ViewBag.Title = "GetTemplates";
+}
+
+<html>
+<head>
+    <title>Templates</title>
+</head>
+<body>
+    @foreach (var site in Model)
+    {
+        <div>
+            <h2>
+                <a href="https://github.com/" target="_blank"> @site.Website </a>
+            </h2>
+            <h3>
+                Content: @site.Content
+            </h3>
+            <h4>Level: @site.Level</h4>
+            <img src="@site.Logo" alt="@site.Website" />
+            <hr />
+        </div>
+    }
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome to the Web Developing Assistant!</h1>
+        <p>This is the navigator website. I will help you to find a way to acquire some knowledge about web development</p>
+        <p>&raquo; @Html.ActionLink("Developer info ", "DevInfo", "Home")</p>
+        <p>&raquo; @Html.ActionLink("Leave some data! ", "GetData", "Home")</p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Study aid</h2>
+            <p>Websites which will help you get some knowledge. By dint of them you will solve your compilation problems and find out how to build your project</p>
+            <p><a class="btn btn-default" role="button" onclick=@Html.ActionLink("Bring it on! ", "GetStudyAid", "Home")</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Templates</h2>
+            <p>You don't have to struggle with every problem or think how to do something, while someone else did it. Find a template for you and save your time</p>
+            <p><a class="btn btn-default" role="button" onclick=@Html.ActionLink("Give it to me! ", "GetTemplates", "Home")</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Memes</h2>
+            <p>Web developing can be exhausting. Chill out and get some fun! Memes are always good. Get some distance and remember - laugh is the best medicine for depression</p>
+            <p><a class="btn btn-default" role="button" onclick=@Html.ActionLink("Let's get it! ", "GetListOfMemes", "Home")</a></p>
+        </div>
+    </div>
+
+    <hr>
+</div>
